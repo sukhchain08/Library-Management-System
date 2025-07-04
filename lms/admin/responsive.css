@@ -1,0 +1,21 @@
+@media (max-width: 992px) {
+    body{
+        overflow: scroll !important;
+    }
+    .dashboard-all-links .link{
+        margin-bottom: 20px;
+    }
+    .search-div{
+        margin-top: 20px;
+    }
+    .search-div .search-input{
+        height: 37px;
+        width: 150px;
+    }
+    .issue-new-book-div span p{
+        font-size: 18px !important;
+    }
+    .issue-new-book-div span input, .issue-new-book-div span select{
+        height: 32px;
+    }
+}

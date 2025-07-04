@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+* a{
+    text-decoration: none;
+}
+.heading{
+    display: flex;
+}
+.heading i{
+    font-size: 25px;
+    color: #000;
+}
+.heading a{
+    margin-right: 15px;
+}
+.nav-item a{
+    letter-spacing: 1px !important;
+    font-size:18px;
+    font-weight: 500;
+}
+.nav-item a:hover{
+    text-decoration: underline;
+}
+.form-div{
+    width: 30%;
+    height: auto;
+    border: 1px solid #000;
+    text-align: center;
+}
+.form-div h4{
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+.form-div .all-inputs{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #dbdada;
+}
+.all-inputs input, select{
+    width: 45% !important;
+    height: 30px;
+    font-size: 16px;
+    outline: none;
+    padding: 0px 10px;
+    margin: 5px;
+    margin-top: 13px;
+    border-radius: 5px;
+    border: 1px solid #7cbebe;
+    box-shadow: 0 0 2px #106e6b;
+    transition: .2s;
+
+}
+.all-inputs input:focus{
+    border: 1px solid #094745;
+    box-shadow: 0 0 0px;
+}
+.all-inputs .submit-btn{
+    box-shadow: 0 0 0px;
+}
+.other-links{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.other-links a{
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+}
+.other-links a:hover{
+    text-decoration: underline;
+}
+.user-name{
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: .6px;
+}
+.dashboard-links .link{
+    display: flex;
+    align-items: center;
+    padding: 5px 0px;
+    margin-bottom: 20px;
+}
+.dashboard-links .link i{
+    font-size: 18px;
+    padding-right: 10px;
+    color: #BB3E00;
+}
+.dashboard-links a{
+    color: #000;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: .4px;
+    transition: .2s;
+    text-decoration: none;
+}
+.dashboard-links .link a:hover{
+    text-decoration: underline;
+}
+.pagination pre{
+    font-size: 18px;
+    font-weight: 600;
+}
+.pagination a{
+    color: #1264a3;
+    text-decoration: none;
+}
+.pagination a:hover{
+    text-decoration: underline;
+}
+.profile-link {
+    border-radius: 5px;
+}
+.profile-link p{
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+}
+.profile-link .top-div p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.edit-detail-link:hover{
+    text-decoration: underline;
+}
+.user-profile{
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+}
+.user-profile table{
+    letter-spacing: .7px;
+}
+.user-profile .student-heading{
+    font-weight: 600;
+    letter-spacing: .7px;
+    padding-left: 15px;
+    font-size: 17px;
+}
+.user-profile .student-value{
+    font-size: 16px;
+    letter-spacing: .9px;
+    margin-left: 20px;
+}
+.edit-input{
+    padding: 2px 8px;
+    outline: none;
+    width: 93%;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    font-size: 16px;
+    letter-spacing: .9px;
+    transition: .2s;
+    margin-left: 20px;
+}
+.edit-input:focus{
+    border: 1px solid #198754;
+}
+.edit-heading{
+    font-weight: 500;
+    letter-spacing: .7px;
+    padding-left: 25px;
+    font-size: 17px; 
+}
