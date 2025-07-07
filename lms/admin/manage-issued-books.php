@@ -122,7 +122,7 @@
                                             {
                                                 echo
                                                 "
-                                                    <a href='update-issued-book-detail.php?usernumber=".htmlspecialchars($books_data['user_number'])."&bookid=".htmlspecialchars($books_data['book_id'])."' class='btn btn-primary'>Edit</a>
+                                                    <a href='update-issued-book-detail.php?usernumber=".htmlspecialchars($books_data['user_number'])."&bookid=".htmlspecialchars($books_data['book_id'])."&sr_no=".htmlspecialchars($books_data['sr_no'])."' class='btn btn-primary'>Edit</a>
                                                 ";
                                             }
                                             echo "
