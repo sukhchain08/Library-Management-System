@@ -6,9 +6,10 @@
     $data_admin = mysqli_query($conn, "SELECT * FROM `admin` WHERE number = '$admin_number'");
     $result_admin = mysqli_fetch_assoc($data_admin);
 
+    $sr_no = $_GET['sr_no'];
     $usernumber = $_GET['usernumber'];
     $bookid = $_GET['bookid'];
-    $issued_book_detail_query = mysqli_query($conn, "SELECT * FROM issued_books WHERE user_number = '$usernumber' AND book_id = '$bookid'");
+    $issued_book_detail_query = mysqli_query($conn, "SELECT * FROM issued_books WHERE user_number = '$usernumber' AND book_id = '$bookid' AND sr_no = '$sr_no'");
     $issued_book_detail = mysqli_fetch_assoc($issued_book_detail_query);
 
     $book_table_query = mysqli_query($conn, "SELECT * FROM books WHERE sr_no = '$bookid'");
