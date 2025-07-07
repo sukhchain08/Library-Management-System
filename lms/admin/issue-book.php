@@ -34,7 +34,7 @@
             date_default_timezone_set('Asia/Kolkata');
             $issue_date = date('d-m-y H:i:s'); // Standard DATETIME format for MySQL
 
-            // ✅ Check if user exists
+            // Check if user exists
             $check_user = mysqli_query($conn, "SELECT * FROM user_data WHERE number = '$usernumber'");
             if(!$check_user) {
                 die("Error fetching user data: " . mysqli_error($conn));
@@ -45,7 +45,7 @@
                 $user = mysqli_fetch_assoc($check_user);
                 $new_username = $user['name'];
 
-                // ✅ Get the book title and availability
+                // Get the book title and availability
                 $get_book_details_query = mysqli_query($conn, "SELECT title, available_copies FROM `books` WHERE sr_no = '$book_id'");
                 if(!$get_book_details_query) {
                     die("Error fetching book details: " . mysqli_error($conn));
@@ -57,7 +57,7 @@
 
                 if ($current_available_copies > 0) 
                 {
-                    // ✅ Check if this book is already issued to the same user
+                    // Check if this book is already issued to the same user
                     $already_issued_query = mysqli_query($conn, "SELECT * FROM issued_books WHERE user_number='$usernumber' AND book_id='$book_id' AND return_date IS NULL");
                     if(!$already_issued_query) {
                         die("Error checking already issued books: " . mysqli_error($conn));
@@ -69,7 +69,7 @@
                         exit();
                     }
 
-                    // ✅ Use Prepared Statement
+                    // Use Prepared Statement
                     $stmt = mysqli_prepare($conn, "INSERT INTO issued_books (book_id, book_title, user_name, user_number, issue_date) VALUES (?, ?, ?, ?, ?)");
                     mysqli_stmt_bind_param($stmt, "issss", $book_id, $book_title, $new_username, $usernumber, $issue_date);
 
@@ -89,7 +89,7 @@
                         error_log("Failed to insert into issued_books (prepared): " . mysqli_stmt_error($stmt));
                     }
 
-                    // ✅ Commit or Rollback
+                    // Commit or Rollback
                     if($transaction_success) {
                         mysqli_commit($conn);
                         mysqli_autocommit($conn, TRUE);
