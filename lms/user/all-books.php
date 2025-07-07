@@ -110,7 +110,7 @@
                         <th>Image</th>
                         <th>Author</th>
                         <th>Category</th>
-                        <th>Added Date</th>
+                        <th>Language</th>
                     </tr>
                     <?php
                         if(mysqli_num_rows($books_data) > 0) {
@@ -124,7 +124,7 @@
                                         <td><img src='".$imagePath."' width='100px' height='150px'></td>
                                         <td>".htmlspecialchars($book_result['author'])."</td>
                                         <td>".htmlspecialchars($book_result['type'])."</td>
-                                        <td class='text-nowrap'>".htmlspecialchars($book_result['added_date'])."</td>
+                                        <td class='text-nowrap'>".htmlspecialchars($book_result['language'])."</td>
                                     </tr>
                                 ";
                             }
