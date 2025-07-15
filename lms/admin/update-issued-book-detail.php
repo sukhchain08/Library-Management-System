@@ -23,7 +23,7 @@
         date_default_timezone_set('Asia/Kolkata');
         $return_date = date('d-m-y H:i:s');
 
-        $return_query = mysqli_query($conn, "UPDATE `issued_books` SET `return_date`='$return_date',`return_status`='$return_status',`fine`='$fine' WHERE user_number = '$usernumber' AND book_id = '$bookid'");
+        $return_query = mysqli_query($conn, "UPDATE `issued_books` SET `return_date`='$return_date',`return_status`='$return_status',`fine`='$fine' WHERE user_number = '$usernumber' AND book_id = '$bookid' AND sr_no = '$sr_no'");
         $increment_copies_query = mysqli_query($conn, "UPDATE `books` SET available_copies = available_copies + 1 WHERE sr_no = '$bookid'");
         if($return_query && $increment_copies_query)
         {
